@@ -1,1 +1,8 @@
-<h1>Home Page</h1>
+<div class="sidebar">
+    <h1>Bloc Chat</h1>
+
+    <div class="rooms" ng-repeat="obj in home.Room">
+        <h2>{{ home.Room[$index].$id }}</h2>
+    </div>
+
+</div>
