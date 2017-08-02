@@ -20,6 +20,7 @@ body, html {
     font-family: 'Arimo', sans-serif;
     margin: 0;
     padding: 10%;
+    margin: 4%;
 }
 
 .sidebar h2 {
@@ -29,6 +30,30 @@ body, html {
     color: white;
 }
 
+.newRoom h2 {
+    color: grey;
+    background-color: white;
+    margin: 4%;
+}
+
+.newRoom h2:hover {
+    background-color: black;
+    color: white;
+}
+
+.sidebar .rooms h2:hover {
+    background-color: white;
+    color: grey;
+}
+
+button {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: white;
+}
 
 .chat {
     margin: 0;
@@ -36,4 +61,28 @@ body, html {
     height: 100%;
     width: 78%;
     padding: 0;
+}
+
+.modalwindow {
+  width: 400px;
+  height: 200px;
+  background-color: grey;
+}
+
+.modalwindow h1,
+.modalwindow h3,
+.modalwindow h4{
+    font-family: 'Arimo', sans-serif;
+}
+
+.cancelbutton,
+.enterbutton {
+    display: inline;
+    width: 100px;
+}
+
+.cancelbutton h4:hover,
+.enterbutton h4:hover {
+    background-color: white;
+    color: grey;
 }
