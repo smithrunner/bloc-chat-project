@@ -4,11 +4,11 @@
         var ref = firebase.database().ref().child("rooms");
         var rooms = $firebaseArray(ref);
 
-        Room.open = $uibModal.open({
+        Room.open = $ubiModal.open({
                 templateUrl : 'templates/modal.html',
                 controller : 'ModalCtrl'
             });
-        };
+
 
         Room.all = rooms;
 
