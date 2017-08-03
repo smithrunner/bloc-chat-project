@@ -1,9 +1,13 @@
 .modalwindow {
-  position: fixed;
+  position: absolute;
   width: 30%;
   height: 20%;
   background-color: grey;
-  margin: 40%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   border: 2px solid black;
 }
 
@@ -32,6 +36,11 @@
 .cancelbutton,
 .enterbutton {
     text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .cancelbutton h4,
@@ -53,7 +62,11 @@
 input[type=submit] {
     font-family: 'Arimo', sans-serif;
     width: 25%;
-    margin-left: 35%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     border: 2px solid black;
     background-color: white;
     color: grey;

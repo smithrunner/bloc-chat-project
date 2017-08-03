@@ -7,7 +7,7 @@
 
         Room.add = function(room) {
             rooms.$add({
-                name: room
+                'room': room
             });
         };
 
@@ -23,15 +23,14 @@
         };
 
         Room.enter = function(name) {
-            var newroom = {};
-            newroom.$value = name;
-            Room.add(newroom);
-            Room.instance.close();
-        }
+            if (name) {
+                Room.add(name);
+                Room.instance.close();
+            }
+        };
 
 
         Room.all = rooms;
-
 
 
         return Room;

@@ -3,7 +3,7 @@
     <div class="newRoom" ng-click="home.Room.open()">
         <h2>New Room</h2>
     </div>
-    <div class="rooms" ng-repeat="obj in home.Room">
-        <h2>{{ home.Room.all[$index].$value }}</h2>
+    <div class="rooms" ng-repeat="obj in home.Room.all">
+        <h2>{{ home.Room.all[$index].room }}</h2>
     </div>
 </div>
