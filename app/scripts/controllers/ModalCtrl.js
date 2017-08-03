@@ -1,9 +1,9 @@
 (function() {
-    function ModalCtrl() {
-
+    function ModalCtrl(Room) {
+        this.Room = Room;
     }
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', [ModalCtrl]);
+        .controller('ModalCtrl', ['Room', ModalCtrl]);
 })();

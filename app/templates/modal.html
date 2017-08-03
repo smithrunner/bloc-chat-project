@@ -1,10 +1,10 @@
 <div class="modalwindow">
     <h1>Create New Room </h1>
-    <input type="text" value="Enter Room Name" name="newroom"><br>
-    <div class="enterbutton">
-        <h4>Enter</h4>
-    </div>
-    <div class="cancelbutton">
+    <form novalidate>
+        <input ng-model="name">
+        <input type="submit" placeholder="Enter Room Name" ng-click='modal.Room.enter(name)' value="Enter">
+    </form>
+    <div class="cancelbutton" ng-click="modal.Room.cancel()">
         <h4>Cancel</h4>
     </div>
 </div>
