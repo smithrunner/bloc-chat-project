@@ -1,9 +1,24 @@
-<div class="sidebar">
-    <h1>Bloc Chat</h1>
-    <div class="newRoom" ng-click="home.Room.open()">
-        <h2>New Room</h2>
+<section class="container">
+    <div class="sidebar">
+        <h1>Bloc Chat</h1>
+        <div class="newRoom" ng-click="home.Room.open()">
+            <h2>New Room</h2>
+        </div>
+        <div class="rooms" ng-repeat="obj in home.Room.all">
+            <h2 ng-click="home.Message.getByRoomId('-KqdJ_Z_de6zf5LYfSJR')">{{ home.Room.all[$index].room }}</h2>
+          <!--  <h2>{{ home.Room.all[$index].$id }}</h2> -->
+        </div>
     </div>
-    <div class="rooms" ng-repeat="obj in home.Room.all">
-        <h2>{{ home.Room.all[$index].room }}</h2>
+
+    <div class="chats">
+        <h1>{{ home.Room.all[0].room }}</h1>
+        <div class="darkchat">
+            <h2>{{ home.Message.selectedRoom.message1.username }}</h2> <h3>{{home.Message.selectedRoom.message1.sentat}}</h3>
+            <h2>{{home.Message.selectedRoom.message1.content}}</h2>
+        </div>
+        <div class="lightchat">
+          <h2>{{ home.Message.selectedRoom.message2.username }}</h2> <h3>{{home.Message.selectedRoom.message2.sentat}}</h3>
+          <h2>{{home.Message.selectedRoom.message2.content}}</h2>
+        </div>
     </div>
-</div>
+</section>

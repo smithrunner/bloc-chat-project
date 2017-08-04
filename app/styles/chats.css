@@ -1,0 +1,54 @@
+.chats {
+  display: inline-block;
+  background-color: white;
+  width: 80%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.chats h1 {
+    padding: 3%;
+    margin: 0;
+    font-family: 'Arimo', sans-serif;
+    color: grey;
+    background-color: white;
+}
+
+.darkchat h2 {
+    font-family: 'Arimo', sans-serif;
+    background-color: rgb(211,211,211);
+    margin: 0;
+    padding-left: 1%;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+    font-size: 0.8rem;
+}
+
+.darkchat h3 {
+    font-family: 'Arimo', sans-serif;
+    background-color: rgb(211,211,211);
+    margin: 0;
+    text-align: right;
+    padding-right: 1%;
+    font-size: 0.7rem;
+}
+
+.lightchat h2 {
+    font-family: 'Arimo', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding-left: 1%;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+    font-size: 0.8rem;
+}
+
+.lightchat h3 {
+    font-family: 'Arimo', sans-serif;
+    background-color: white;
+    margin: 0;
+    text-align: right;
+    padding-right: 1%;
+    font-size: 0.7rem;
+}
