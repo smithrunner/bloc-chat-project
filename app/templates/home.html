@@ -5,21 +5,16 @@
             <h2>New Room</h2>
         </div>
         <div class="rooms" ng-repeat="obj in home.Room.all">
-            <h2 ng-click="home.Message.getByRoomId('-KqdJ_Z_de6zf5LYfSJR')">{{ home.Room.all[$index].room }}</h2>
-          <!--  <h2>{{ home.Room.all[$index].$id }}</h2> -->
+            <h2 ng-click="home.Message.getByRoomId(home.Room.all[$index].$id, $index)">{{ home.Room.all[$index].room }}</h2>
         </div>
     </div>
 
     <div class="chats">
-        <h1>{{ home.Room.all[0].room }}</h1>
+        <h1>{{ home.Room.all[home.Message.index].room }}</h1>
         <div class="chatContainer" ng-repeat="obj in home.Message.selectedRoom">
-            <div class="darkchat">
-                <h2>{{ home.Message.selectedRoom[$index].username }}</h2> <h3>{{home.Message.selectedRoom.message1.sentat}}</h3>
-                <h2>{{home.Message.selectedRoom.message1.content}}</h2>
-            </div>
-            <div class="lightchat">
-              <h2>{{ home.Message.selectedRoom.message2.username }}</h2> <h3>{{home.Message.selectedRoom.message2.sentat}}</h3>
-              <h2>{{home.Message.selectedRoom.message2.content}}</h2>
+            <div ng-class="home.Message.userDivSelector(home.Message.selectedRoom[$index].username)">
+                <h2>{{home.Message.selectedRoom[$index].username}}</h2> <h3>{{home.Message.selectedRoom[$index].sentat}}</h3>
+                <h2>{{home.Message.selectedRoom[$index].content}}</h2>
             </div>
         </div>
     </div>
