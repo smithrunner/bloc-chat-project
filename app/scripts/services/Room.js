@@ -1,5 +1,5 @@
 (function() {
-    function Room($firebaseArray, $uibModal) {
+    function Room($firebaseArray, $uibModal, $cookies) {
         var Room = {};
         var ref = firebase.database().ref().child("rooms");
         var rooms = $firebaseArray(ref);
@@ -29,14 +29,33 @@
             }
         };
 
+        Room.openCookie = function() {
+          Room.cookieInstance = $uibModal.open({
+          templateUrl : 'templates/usernameModal.html',
+          controller : 'ModalCtrl as modal',
+          backdrop: 'static',
+          keyboard: false
+          });
+        };
+
+        Room.closeCookie = function(username) {
+            if (username) {
+                $cookies.put('blocChatCurrentUser', username);
+                Room.cookieInstance.close();
+            };
+
+        };
+
+        Room.fart = function() {
+            console.log('fart');
+        };
 
         Room.all = rooms;
-
 
         return Room;
     }
 
     angular
         .module('blocChat')
-        .factory('Room', ['$firebaseArray','$uibModal', Room]);
+        .factory('Room', ['$firebaseArray','$uibModal', '$cookies', Room]);
 })();

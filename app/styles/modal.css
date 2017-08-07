@@ -42,8 +42,7 @@
     margin: auto;
 }
 
-.cancelbutton h4,
-.enterbutton h4 {
+.cancelbutton h4 {
     background-color: white;
     color: grey;
     text-align: center;
@@ -57,6 +56,7 @@
     background-color: black;
     color: white;
 }
+
 
 input[type=submit] {
     font-family: 'Arimo', sans-serif;
