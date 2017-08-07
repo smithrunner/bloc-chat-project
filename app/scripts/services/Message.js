@@ -8,7 +8,6 @@
             ref.orderByChild('roomId').equalTo(roomId).on('value', function(snapshot) {
                 Message.selectedRoom = snapshot.val();
                 Message.index = index;
-                console.log(Message.selectedRoom[0]);
             });
         }
 
