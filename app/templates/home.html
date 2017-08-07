@@ -11,7 +11,7 @@
 
     <div class="chats">
         <h1>{{ home.Room.all[home.Message.index].room }}</h1>
-        <div class="chatContainer" ng-repeat="(key,value) in home.Message.selectedRoom">
+        <div class="chatContainer" ng-repeat="(key, value) in home.Message.selectedRoom">
             <div ng-class="home.Message.userDivSelector(home.Message.selectedRoom[key].username)">
                 <h2>{{home.Message.selectedRoom[key].username}}</h2> <h3>{{home.Message.selectedRoom[key].sentat}}</h3>
                 <h2>{{home.Message.selectedRoom[key].content}}</h2>
