@@ -8,7 +8,6 @@
             ref.orderByChild('roomId').equalTo(roomId).on('value', function(snapshot) {
                 Message.selectedRoom = snapshot.val();
                 Message.index = index;
-                console.log(Message.selectedRoom[0]);
             });
         }
 
@@ -22,12 +21,9 @@
 
 
         Message.lastClass = 'lightchat';
+        Message.lastUsername = '';
         Message.userDivSelector = function(username) {
-            if (Message.lastUsername == undefined) {
-                Message.lastUsername = username;
-                Message.lastClass = 'darkchat';
-                return Message.lastClass;
-            } else if (username != Message.lastUsername) {
+            if (username != Message.lastUsername) {
                 Message.lastClass = Message.classSwitcher(Message.lastClass);
                 Message.lastUsername = username;
                 return Message.lastClass;
