@@ -1,5 +1,5 @@
 (function() {
-    function Message($firebaseArray) {
+    function Message($firebaseArray, $cookies) {
         var Message = {};
         var ref = firebase.database().ref().child('messages');
         var messages = $firebaseArray(ref);
@@ -7,6 +7,7 @@
         Message.getByRoomId = function(roomId, index) {
             ref.orderByChild('roomId').equalTo(roomId).on('value', function(snapshot) {
                 Message.selectedRoom = snapshot.val();
+                Message.selectedRoomId = roomId;
                 Message.index = index;
             });
         }
@@ -35,11 +36,25 @@
             };
         };
 
+        Message.send = function(newMessage) {
+            var chatUser = $cookies.get('blocChatCurrentUser');
+            var datetime = new Date();
+            var time = (datetime.getHours()-12) + ":" + datetime.getMinutes();
+            var NewChat = {
+                username : chatUser,
+                sentat : time,
+                content : newMessage,
+                roomId : Message.selectedRoomId
+            };
+            messages.$add(NewChat);
+            console.log(newMessage);
+        };
+
         Message.all = messages;
         return Message;
     }
 
     angular
         .module('blocChat')
-        .factory('Message', ['$firebaseArray', Message]);
+        .factory('Message', ['$firebaseArray', '$cookies', Message]);
 })();
