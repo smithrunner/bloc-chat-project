@@ -13,7 +13,7 @@
         <h1>{{ home.Room.all[home.Message.index].room }}</h1>
         <div class="chatContainer" ng-repeat="(key, value) in home.Message.selectedRoom">
             <div ng-class="home.Message.userDivSelector(home.Message.selectedRoom[key].username)">
-                <h2>{{home.Message.selectedRoom[key].username}}</h2> <h3>{{home.Message.selectedRoom[key].sentat}}</h3>
+                <h2 class="user">{{home.Message.selectedRoom[key].username}}</h2> <h3>{{home.Message.selectedRoom[key].sentat}}</h3>
                 <h2>{{home.Message.selectedRoom[key].content}}</h2>
             </div>
         </div>
@@ -21,7 +21,7 @@
     <div class="chatfield">
           <form class="messagebar" novalidate>
               <input ng-model="chatmessage">
-              <input type="submit" placeholder="Type Message Here" ng-click='home.Message.send(chatmessage)' value="Enter">
+              <input type="submit" placeholder="Type Message Here" ng-click='home.Message.send(chatmessage)' value="Send">
           </form>
     </div>
 </section>

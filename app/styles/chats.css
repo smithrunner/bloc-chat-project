@@ -25,6 +25,19 @@
     font-size: 0.8rem;
 }
 
+.darkchat .user {
+    font-family: 'Arimo', sans-serif;
+    background-color: rgb(211,211,211);
+    margin: 0;
+    padding-left: 1%;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+
+
 .darkchat h3 {
     font-family: 'Arimo', sans-serif;
     background-color: rgb(211,211,211);
@@ -44,6 +57,17 @@
     font-size: 0.8rem;
 }
 
+.lightchat .user {
+    font-family: 'Arimo', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding-left: 1%;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
 .lightchat h3 {
     font-family: 'Arimo', sans-serif;
     background-color: white;
@@ -54,36 +78,29 @@
 }
 
 .chatfield {
-    background-color: black;
     width: 100%;
-    height: 5%;
+    padding-right: 10%;
+    height: 4%;
 }
 
-.entertext {
-    padding-left: 10%;
+.chatfield input {
+    padding-right: 60%;
+    padding-bottom: 1.8%;
+    box-sizing: border-box;
 }
 
-.entertext input {
-    width: 80%;
-    height: 10%;
-    resize: none;
-}
-
-.submittext {
-    width: 8%;
+.chatfield input[type=submit] {
+    width: 5%;
+    padding-right: 5%;
+    padding-bottom: 1.8%;
     margin: 0;
-    padding-left: 93%;
+    font-family: 'Arimo', sans-serif;
+    font-size: .8rem;
+    background-color: grey;
     color: white;
 }
 
-.submittext h2 {
-    font-family: 'Arimo', sans-serif;
-    margin: 0;
-    height: 5%;
-    padding-bottom: 1.5%;
-}
-
-.submittext h2:hover {
-    color: grey;
+.chatfield input[type=submit]:hover {
     background-color: white;
+    color: black;
 }

@@ -36,7 +36,20 @@
         Message.send = function(newMessage) {
             var chatUser = $cookies.get('blocChatCurrentUser');
             var datetime = new Date();
-            var time = (datetime.getHours()-12) + ":" + datetime.getMinutes();
+            var minutes = datetime.getMinutes();
+            var hour = datetime.getHours();
+            if (minutes < 10) {
+                minutes = "0"+minutes;
+            };
+
+            if (hour > 12) {
+                hour=hour-12;
+                minutes=minutes+"pm";
+            } else {
+                minutes=minutes+"am";
+            };
+
+            var time = hour + ":" + minutes;
             var NewChat = {
                 username : chatUser,
                 sentat : time,
@@ -44,7 +57,7 @@
                 roomId : Message.selectedRoomId
             };
             messages.$add(NewChat);
-            console.log(newMessage);
+
         };
 
         Message.all = messages;

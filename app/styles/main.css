@@ -50,8 +50,9 @@ body, html {
 
 .sidebar .rooms h2:hover {
     background-color: white;
-    color: grey;
+    color: black;
 }
+
 
 button {
     font-size: 1rem;
